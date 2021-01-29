@@ -1,7 +1,7 @@
-# F-Drop
+# F-Detector
 
-F-drop is a tool for disabling an unwanted features in a program. 
-This repo contains a demo of F-Drop that runs on linux systems. 
+F-Detector is a tool for disabling an unwanted features in a program. 
+This repo contains a demo of F-Detector that runs on linux systems. 
 
 ## Requirements
 - Docker
@@ -20,7 +20,7 @@ __NOTE: Before running the tool you have to run IDA from inside the container an
 - Run: ./busyBoxWget.sh or ./zipUnzipCmndArg.sh
 
 
-Each of the scripts run __F-drop__ on a specified program and feature. The intermediate results are stored in tests/results. When __F-drop__ finishes, it outputs a new patched executable with the unwanted feature disabled. 
+Each of the scripts run __F-Detector__ on a specified program and feature. The intermediate results are stored in tests/results. When __F-Detector__ finishes, it outputs a new patched executable with the unwanted feature disabled. 
 
 ## Test Cases
 There are 13 test cases each disables a different feature in 9 apps. However we only put in this repo the executables of busybox
@@ -43,5 +43,5 @@ To run the test script :
 ## FAQ
 __I forgot to accept IDA license before I run the script. The script is now hanging. What do I do?__
 
-This happens because __F-drop__ is waiting for IDA to launch but it won't. Press ctr+c, sign the license, and 
+This happens because __F-Detector__ is waiting for IDA to launch but it won't. Press ctr+c, sign the license, and 
 remove the corrupted temporal files by running: `rm -r /tmp/uid_0`. Then try again
