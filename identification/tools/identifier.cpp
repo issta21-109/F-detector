@@ -18,7 +18,7 @@
 #include "utils.hpp"
 
 
-#define NO_IDA 0
+#define NO_IDA 1
 
 using namespace std; 
 
