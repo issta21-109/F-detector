@@ -5,7 +5,7 @@ This repo contains a demo of F-Detector that runs on linux systems.
 
 ## Requirements
 - Docker
-- IDA 3.4 (Check [Here](#i-dont-have-ida.-what-can-i-do?) if missing)
+- IDA 3.4 (Check [Here](#i-dont-have-ida-what-can-i-do) if missing)
 
 
 ## Building the tool
