@@ -5,7 +5,7 @@ This repo contains a demo of F-Detector that runs on linux systems.
 
 ## Requirements
 - Docker
-- IDA 3.4 (Check [Here](#i-dont-have-ida.-what-can-i-do?) if missing)
+- IDA 3.4 (Check [Here](#i-dont-have-ida-what-can-i-do) if missing)
 
 
 ## Building the tool
@@ -15,12 +15,14 @@ This repo contains a demo of F-Detector that runs on linux systems.
 
 ## Testing the tool
 __NOTE: Before running the tool you have to run IDA from inside the container and accept its license. This is mandatory since IDA running inside the container consider you as a new user. Without this action our tool will not be able to run IDA in the background__
-- Run IDA to accept the license: /ida/idat64
-- Enter the test directory: cd test/test_cases
-- Run: ./busyBoxWget.sh or ./zipUnzipCmndArg.sh
+- Run IDA to accept the license: `/ida/idat64`
+- Enter the test directory: `cd test/test_cases`
+- Run: `./busyBoxWget.sh` or `./zipUnzipCmndArg.sh`
 
 
-Each of the scripts run __F-Detector__ on a specified program and feature. The intermediate results are stored in tests/results. When __F-Detector__ finishes, it outputs a new patched executable with the unwanted feature disabled. 
+Each of the scripts run __F-Detector__ on a specified program and feature. The intermediate results are stored in tests/results. When __F-Detector__ finishes, it outputs a new patched executable with the unwanted feature disabled. The new patched file is stored in `test` directory.
+
+To test if the new patch executable disables the feature, run `./busybox-patched wget`. The program should get inturupted and exits without executing the feature.
 
 ## Test Cases
 There are 13 test cases each disables a different feature in 9 apps. However we only put in this repo the executables of busybox
@@ -36,8 +38,8 @@ To build the repo:
 - Enter the repo and make: `cd feat_removal && make`
 
 To run the test script : 
-- Enter the test directory: cd test/test_cases
-- Run: ./busyBoxWget.sh or ./zipUnzipCmndArg.sh
+- Enter the test directory: `cd test/test_cases`
+- Run: `./busyBoxWget.sh` or `./zipUnzipCmndArg.sh`
 
 
 ## FAQ
